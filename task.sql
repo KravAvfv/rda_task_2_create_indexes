@@ -1,19 +1,18 @@
 # Write your SQL code for the database creation here. Good luck! 
 USE ShopDB; 
 
--- Таблиця Products
+-- Products
 CREATE INDEX Name ON Products (Name);
 CREATE INDEX Price ON Products (Price);
 
--- Таблиця Customers
-CREATE INDEX FirstName ON Customers (FirstName);
-CREATE INDEX LastName ON Customers (LastName);
+-- Customers
 CREATE INDEX Email ON Customers (Email);
+CREATE INDEX LastName ON Customers (LastName);
 
--- Таблиця Orders
+-- Orders
 CREATE INDEX CustomerID ON Orders (CustomerID);
 CREATE INDEX Date ON Orders (Date);
 
--- Таблиця OrderItems
+-- OrderItems
 CREATE INDEX OrderID ON OrderItems (OrderID);
 CREATE INDEX ProductID ON OrderItems (ProductID);
