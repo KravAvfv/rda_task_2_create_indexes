@@ -3,7 +3,6 @@ USE ShopDB;
 
 -- Таблиця Products
 CREATE INDEX Name ON Products (Name);
-CREATE INDEX Description ON Products (Description);
 CREATE INDEX Price ON Products (Price);
 CREATE INDEX WarehouseAmount ON Products (WarehouseAmount);
 
@@ -11,7 +10,6 @@ CREATE INDEX WarehouseAmount ON Products (WarehouseAmount);
 CREATE INDEX FirstName ON Customers (FirstName);
 CREATE INDEX LastName ON Customers (LastName);
 CREATE INDEX Email ON Customers (Email);
-CREATE INDEX Address ON Customers (Address);
 
 -- Таблиця Orders
 CREATE INDEX CustomerID ON Orders (CustomerID);
