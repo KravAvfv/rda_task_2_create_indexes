@@ -1,18 +1,15 @@
 # Write your SQL code for the database creation here. Good luck! 
 USE ShopDB; 
 
--- Products
+-- Для Products: пошук товарів за назвою
 CREATE INDEX Name ON Products (Name);
-CREATE INDEX Price ON Products (Price);
 
--- Customers
+-- Для Customers: пошук клієнта за email при логіні
 CREATE INDEX Email ON Customers (Email);
-CREATE INDEX LastName ON Customers (LastName);
 
--- Orders
+-- Для Orders: швидке з'єднання замовлень з клієнтами
 CREATE INDEX CustomerID ON Orders (CustomerID);
-CREATE INDEX Date ON Orders (Date);
 
--- OrderItems
+-- Для OrderItems: прискорення операцій при додаванні товарів до замовлення
 CREATE INDEX OrderID ON OrderItems (OrderID);
 CREATE INDEX ProductID ON OrderItems (ProductID);
